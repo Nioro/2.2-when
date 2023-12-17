@@ -31,6 +31,13 @@ namespace _2._2when
                 version.Text = "Yes";
                 version.ForeColor = Color.LightGreen;
                 timeRefreshed.Text = DateTime.Now.ToLongTimeString();
+                if (checkBox.Checked)
+                {
+                    while (true)
+                    {
+                        Console.Beep();
+                    }
+                }
             }
             else
             {
@@ -72,7 +79,38 @@ namespace _2._2when
 
         private void githubRepos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
+        }
+
+        private void timeRefreshedLabel_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
+
+        private void linkNioro_Click(object sender, EventArgs e)
+        {
             System.Diagnostics.Process.Start("https://github.com/Nioro/2.2-when");
+        }
+
+        private void linkStrainxx_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/strainxx/is2.2out");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
