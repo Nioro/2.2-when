@@ -35,6 +35,7 @@
             this.checkVersion = new System.Windows.Forms.Button();
             this.timeRefreshedLabel = new System.Windows.Forms.Label();
             this.timeRefreshed = new System.Windows.Forms.Label();
+            this.githubRepos = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // version
@@ -43,7 +44,7 @@
             this.version.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(84)))), ((int)(((byte)(133)))));
             this.version.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.version.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.version.Location = new System.Drawing.Point(49, 131);
+            this.version.Location = new System.Drawing.Point(49, 147);
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(44, 46);
             this.version.TabIndex = 0;
@@ -56,7 +57,7 @@
             this.tpt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(84)))), ((int)(((byte)(133)))));
             this.tpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tpt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
-            this.tpt.Location = new System.Drawing.Point(44, 43);
+            this.tpt.Location = new System.Drawing.Point(44, 59);
             this.tpt.Name = "tpt";
             this.tpt.Size = new System.Drawing.Size(422, 73);
             this.tpt.TabIndex = 1;
@@ -76,7 +77,7 @@
             this.checkVersion.FlatAppearance.BorderSize = 0;
             this.checkVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkVersion.ForeColor = System.Drawing.Color.White;
-            this.checkVersion.Location = new System.Drawing.Point(57, 207);
+            this.checkVersion.Location = new System.Drawing.Point(57, 223);
             this.checkVersion.Name = "checkVersion";
             this.checkVersion.Size = new System.Drawing.Size(158, 46);
             this.checkVersion.TabIndex = 2;
@@ -89,7 +90,7 @@
             this.timeRefreshedLabel.AutoSize = true;
             this.timeRefreshedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.timeRefreshedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
-            this.timeRefreshedLabel.Location = new System.Drawing.Point(129, 148);
+            this.timeRefreshedLabel.Location = new System.Drawing.Point(129, 164);
             this.timeRefreshedLabel.Name = "timeRefreshedLabel";
             this.timeRefreshedLabel.Size = new System.Drawing.Size(202, 25);
             this.timeRefreshedLabel.TabIndex = 3;
@@ -100,12 +101,30 @@
             this.timeRefreshed.AutoSize = true;
             this.timeRefreshed.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.timeRefreshed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
-            this.timeRefreshed.Location = new System.Drawing.Point(337, 148);
+            this.timeRefreshed.Location = new System.Drawing.Point(337, 164);
             this.timeRefreshed.Name = "timeRefreshed";
             this.timeRefreshed.Size = new System.Drawing.Size(30, 25);
             this.timeRefreshed.TabIndex = 4;
             this.timeRefreshed.Text = "...";
             this.timeRefreshed.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // githubRepos
+            // 
+            this.githubRepos.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
+            this.githubRepos.AutoSize = true;
+            this.githubRepos.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
+            this.githubRepos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.githubRepos.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.githubRepos.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.githubRepos.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
+            this.githubRepos.Location = new System.Drawing.Point(0, 320);
+            this.githubRepos.Name = "githubRepos";
+            this.githubRepos.Size = new System.Drawing.Size(88, 29);
+            this.githubRepos.TabIndex = 5;
+            this.githubRepos.TabStop = true;
+            this.githubRepos.Text = "github";
+            this.githubRepos.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
+            this.githubRepos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.githubRepos_LinkClicked);
             // 
             // Form1
             // 
@@ -113,7 +132,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(84)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(804, 413);
+            this.ClientSize = new System.Drawing.Size(662, 349);
+            this.Controls.Add(this.githubRepos);
             this.Controls.Add(this.timeRefreshed);
             this.Controls.Add(this.timeRefreshedLabel);
             this.Controls.Add(this.checkVersion);
@@ -121,6 +141,7 @@
             this.Controls.Add(this.version);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.Tag = "";
             this.Text = "2.2 when";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -136,6 +157,7 @@
         private System.Windows.Forms.Button checkVersion;
         private System.Windows.Forms.Label timeRefreshedLabel;
         private System.Windows.Forms.Label timeRefreshed;
+        private System.Windows.Forms.LinkLabel githubRepos;
     }
 }
 

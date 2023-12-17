@@ -22,9 +22,9 @@ namespace _2._2when
         public Form1()
         {
             InitializeComponent();
-            checkSteam();
+            CheckSteam();
         }
-        private void checkSteam()
+        private void CheckSteam()
         {
             if (GeometryDash.geometryDashVersion != "1511222225")
             {
@@ -57,17 +57,22 @@ namespace _2._2when
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            checkSteam();
+            CheckSteam();
         }
 
         private void checkVersion_Click(object sender, EventArgs e)
         {
-            checkSteam();
+            CheckSteam();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void githubRepos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Nioro/2.2-when");
         }
     }
 
