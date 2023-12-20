@@ -26,7 +26,19 @@ namespace _2._2when
         }
         private void CheckSteam()
         {
-            if (GeometryDash.geometryDashVersion != "1511222225")
+            string url = "https://api.steamcmd.net/v1/info/322170";
+
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+            HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+            Stream stream = res.GetResponseStream();
+            StreamReader streamRead = new StreamReader(stream);
+
+            string streamReadData = streamRead.ReadToEnd();
+
+            dynamic d = JsonConvert.DeserializeObject(streamReadData);
+            string geometryDashVersion = d.data["322170"].depots.branches["public"].timeupdated.ToString();
+
+            if (geometryDashVersion != "1511222225")
             {
                 version.Text = "Yes";
                 version.ForeColor = Color.LightGreen;
@@ -113,20 +125,4 @@ namespace _2._2when
 
         }
     }
-
-    static class GeometryDash
-    {
-        static string url = "https://api.steamcmd.net/v1/info/322170";
-
-        static HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-        static HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-        static Stream stream = res.GetResponseStream();
-        static StreamReader streamRead = new StreamReader(stream);
-
-        static public string streamReadData = streamRead.ReadToEnd();
-
-        static public dynamic d = JsonConvert.DeserializeObject(streamReadData);
-        static public string geometryDashVersion = d.data["322170"].depots.branches["public"].timeupdated.ToString();
-    }
-
 }
