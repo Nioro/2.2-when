@@ -38,7 +38,7 @@ namespace _2._2when
             dynamic d = JsonConvert.DeserializeObject(streamReadData);
             string geometryDashVersion = d.data["322170"].depots.branches["public"].timeupdated.ToString();
 
-            if (geometryDashVersion != "1511222225")
+            if (geometryDashVersion != "1703035638")
             {
                 version.Text = "Yes";
                 version.ForeColor = Color.LightGreen;
