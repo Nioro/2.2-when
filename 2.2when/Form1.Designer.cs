@@ -62,11 +62,11 @@
             this.tpt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(84)))), ((int)(((byte)(133)))));
             this.tpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tpt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
-            this.tpt.Location = new System.Drawing.Point(262, 11);
+            this.tpt.Location = new System.Drawing.Point(249, 11);
             this.tpt.Name = "tpt";
-            this.tpt.Size = new System.Drawing.Size(458, 73);
+            this.tpt.Size = new System.Drawing.Size(494, 73);
             this.tpt.TabIndex = 1;
-            this.tpt.Text = "2.21 released?";
+            this.tpt.Text = "2.201 released?";
             this.tpt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tpt.Click += new System.EventHandler(this.tpt_Click);
             // 
@@ -160,9 +160,9 @@
             this.checkBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(65)))));
             this.checkBox.Location = new System.Drawing.Point(12, 640);
             this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(318, 28);
+            this.checkBox.Size = new System.Drawing.Size(328, 28);
             this.checkBox.TabIndex = 7;
-            this.checkBox.Text = "make beeps when 2.21 comes out";
+            this.checkBox.Text = "make beeps when 2.201 comes out";
             this.checkBox.UseVisualStyleBackColor = true;
             this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
@@ -188,7 +188,7 @@
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "2.21 when";
+            this.Text = "2.201 when";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
