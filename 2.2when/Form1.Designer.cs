@@ -66,7 +66,7 @@
             this.tpt.Name = "tpt";
             this.tpt.Size = new System.Drawing.Size(494, 73);
             this.tpt.TabIndex = 1;
-            this.tpt.Text = "2.201 released?";
+            this.tpt.Text = "2.202 released?";
             this.tpt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tpt.Click += new System.EventHandler(this.tpt_Click);
             // 
@@ -162,7 +162,7 @@
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(328, 28);
             this.checkBox.TabIndex = 7;
-            this.checkBox.Text = "make beeps when 2.201 comes out";
+            this.checkBox.Text = "make beeps when 2.202 comes out";
             this.checkBox.UseVisualStyleBackColor = true;
             this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
@@ -188,7 +188,7 @@
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "2.201 when";
+            this.Text = "2.202 when";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
